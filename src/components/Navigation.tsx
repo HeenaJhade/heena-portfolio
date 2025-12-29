@@ -1,9 +1,13 @@
-import { Github, Linkedin, FileDown } from 'lucide-react';
+import { useState } from 'react';
+import { Github, Linkedin, FileDown, Menu, X } from 'lucide-react';
 
 export default function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: 'smooth' });
+    setIsOpen(false);
   };
 
   const handleDownloadResume = () => {
@@ -16,7 +20,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-m shadow-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="text-xl font-bold text-slate-800">
@@ -71,8 +75,42 @@ export default function Navigation() {
               <FileDown className="w-4 h-4" />
               <span className="hidden sm:inline">Resume</span>
             </button>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden text-slate-600 hover:text-emerald-600 transition-colors"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
         </div>
+
+        {isOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-sm shadow-lg border-b border-slate-200">
+            <div className="flex flex-col space-y-4 p-6">
+              <button onClick={() => scrollToSection('home')} className="text-slate-600 hover:text-emerald-600 transition-colors py-2 text-left">
+                Home
+              </button>
+              <button onClick={() => scrollToSection('about')} className="text-slate-600 hover:text-emerald-600 transition-colors py-2 text-left">
+                About
+              </button>
+              <button onClick={() => scrollToSection('skills')} className="text-slate-600 hover:text-emerald-600 transition-colors py-2 text-left">
+                Skills
+              </button>
+              <button onClick={() => scrollToSection('projects')} className="text-slate-600 hover:text-emerald-600 transition-colors py-2 text-left">
+                Projects
+              </button>
+              <button onClick={() => scrollToSection('services')} className="text-slate-600 hover:text-emerald-600 transition-colors py-2 text-left">
+                Services
+              </button>
+              <button onClick={() => scrollToSection('education')} className="text-slate-600 hover:text-emerald-600 transition-colors py-2 text-left">
+                Education
+              </button>
+              <button onClick={() => scrollToSection('contact')} className="text-slate-600 hover:text-emerald-600 transition-colors py-2 text-left">
+                Contact
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

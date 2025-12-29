@@ -1,4 +1,9 @@
 import { ExternalLink, Github } from 'lucide-react';
+import airbnbImg from "../assets/airbnb.png";
+import jobSathiImg from "../assets/JobSathi.png";
+import portfolioImg from "../assets/portfolio.png";
+import weatherImg from "../assets/weather.png";
+import calculatorImg from "../assets/calculator.png";
 
 export default function Projects() {
   const projects = [
@@ -10,7 +15,7 @@ export default function Projects() {
       status: 'Currently Running',
       github: 'https://github.com/HeenaJhade/IndiStay-AirbnbPracticeClone-Node-Express-MySQL-Razorpay',
       gradient: 'from-green-500 to-green-700',
-      image: '/assets/airbnb.png',
+      image: airbnbImg,
     },
     {
       title: 'JobConnect (JobSathi)',
@@ -19,7 +24,7 @@ export default function Projects() {
       link: 'https://job-sathi-theta.vercel.app/',
       github: 'https://github.com/HeenaJhade/JobSathi',
       gradient: 'from-blue-500 to-blue-700',
-      image: '/assets/JobSathi.png',
+      image: jobSathiImg,
 
     },
    
@@ -30,7 +35,7 @@ export default function Projects() {
       link: 'https://heena-portfolio-ebon.vercel.app',
       github: 'https://github.com/HeenaJhade/heena-portfolio',
       gradient: 'from-purple-500 to-purple-700',
-      image: '/assets/portfolio.png',
+      image: portfolioImg,
     },
     {
       title: 'Airbnb Landing Page',
@@ -39,7 +44,7 @@ export default function Projects() {
       link: 'https://github.com/HeenaJhade/landing-page',
       github: 'https://github.com/HeenaJhade/landing-page',
       gradient: 'from-pink-500 to-pink-700',
-      image: '/assets/airbnb.png',
+      image: airbnbImg,
     },
     {
       title: 'Weather Website',
@@ -48,7 +53,7 @@ export default function Projects() {
       link: 'https://github.com/HeenaJhade/weatherweb',
       github: 'https://github.com/HeenaJhade/weatherweb',
       gradient: 'from-cyan-500 to-cyan-700',
-      image: '/assets/weather.png',
+      image: weatherImg,
     },
     {
       title: 'Calculator',
@@ -57,7 +62,7 @@ export default function Projects() {
       link: 'https://github.com/HeenaJhade/web-calculator',
       github: 'https://github.com/HeenaJhade/web-calculator',
       gradient: 'from-orange-500 to-orange-700',
-      image: '/assets/calculator.png',
+      image:calculatorImg,
     }
   ];
 
