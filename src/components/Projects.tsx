@@ -25,7 +25,7 @@ export default function Projects() {
    
     {
       title: 'Portfolio Website',
-      description: 'A fully responsive local job-search platform featuring secure email-based authentication, role-based dashboards for employers and job seekers, profile management, job postings, applications, and a built-in messaging system.',
+      description: 'A modern and responsive personal portfolio website showcasing my projects, technical skills, and experience. Built with modern web technologies, it features a clean UI, smooth navigation, and a professional design for recruiters.',
       technologies: ['React', 'Tailwind CSS', 'TypeScript'],
       link: 'https://heena-portfolio-ebon.vercel.app',
       github: 'https://github.com/HeenaJhade/heena-portfolio',

@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
+import myImg from "../assets/myimg.jpg";
 
 export default function Hero() {
   const scrollToContact = () => {
@@ -56,7 +57,7 @@ export default function Hero() {
 
           <div className="order-1 md:order-2 flex justify-center">
             <div className="relative">
-              <img src="../public/assets/myimg.jpg" alt="my-image" className="w-72 h-72 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center text-white text-8xl font-bold shadow-2xl"/>
+              <img src={myImg} alt="my-image" className="w-72 h-72 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center text-white text-8xl font-bold shadow-2xl"/>
 
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-emerald-600 rounded-full flex items-center justify-center text-white shadow-lg">
                 <div className="text-center">
