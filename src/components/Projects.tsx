@@ -6,7 +6,7 @@ export default function Projects() {
       title: 'IndiStay (Accommodation Booking)',
       description: 'A responsive rental platform that includes user authentication, home listings, favorites, bookings, and Razorpay payment integration. Features secure data storage and a clean user interface.',
       technologies: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'MySQL', 'Razorpay'],
-      link: '#',
+      link: null,
       status: 'Currently Running',
       github: 'https://github.com/HeenaJhade/IndiStay-AirbnbPracticeClone-Node-Express-MySQL-Razorpay',
       gradient: 'from-green-500 to-green-700',
@@ -25,9 +25,9 @@ export default function Projects() {
    
     {
       title: 'Portfolio Website',
-      description: 'A personal portfolio website showcasing projects, skills, and experience. Built with modern web technologies and responsive design principles.',
+      description: 'A fully responsive local job-search platform featuring secure email-based authentication, role-based dashboards for employers and job seekers, profile management, job postings, applications, and a built-in messaging system.',
       technologies: ['React', 'Tailwind CSS', 'TypeScript'],
-      link: '#',
+      link: 'https://heena-portfolio-ebon.vercel.app',
       github: 'https://github.com/HeenaJhade/heena-portfolio',
       gradient: 'from-purple-500 to-purple-700',
       image: '/assets/portfolio.png',
@@ -36,7 +36,7 @@ export default function Projects() {
       title: 'Airbnb Landing Page',
       description: 'A pixel-perfect clone of the Airbnb landing page, demonstrating proficiency in HTML, CSS, and responsive design techniques.',
       technologies: ['HTML', 'CSS', 'JavaScript'],
-      link: '#',
+      link: 'https://github.com/HeenaJhade/landing-page',
       github: 'https://github.com/HeenaJhade/landing-page',
       gradient: 'from-pink-500 to-pink-700',
       image: '/assets/airbnb.png',
@@ -45,7 +45,7 @@ export default function Projects() {
       title: 'Weather Website',
       description: 'A weather application that provides real-time weather information using API integration. Features clean UI and location-based weather data.',
       technologies: ['HTML', 'CSS', 'JavaScript', 'Weather API'],
-      link: '#',
+      link: 'https://github.com/HeenaJhade/weatherweb',
       github: 'https://github.com/HeenaJhade/weatherweb',
       gradient: 'from-cyan-500 to-cyan-700',
       image: '/assets/weather.png',
@@ -54,7 +54,7 @@ export default function Projects() {
       title: 'Calculator',
       description: 'A functional calculator web application with a clean interface and smooth animations. Supports basic arithmetic operations.',
       technologies: ['HTML', 'CSS', 'JavaScript'],
-      link: '#',
+      link: 'https://github.com/HeenaJhade/web-calculator',
       github: 'https://github.com/HeenaJhade/web-calculator',
       gradient: 'from-orange-500 to-orange-700',
       image: '/assets/calculator.png',
@@ -110,15 +110,29 @@ export default function Projects() {
                 </div>
 
                 <div className="flex space-x-3">
-                  <a
-                    href={project.link}
-                    className="flex-1 flex items-center justify-center space-x-2 px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors text-sm"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    <span>View Live</span>
-                  </a>
+                  {project.link ? (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center space-x-2 px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors text-sm"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      <span>View Live</span>
+                    </a>
+                  ) : (
+                    <button
+                      disabled
+                      className="flex-1 flex items-center justify-center space-x-2 px-4 py-2 bg-gray-300 text-gray-500 rounded-lg cursor-not-allowed text-sm"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      <span>Not Live Yet</span>
+                    </button>
+                  )}
                   <a
                     href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center justify-center px-4 py-2 border-2 border-slate-300 text-slate-700 rounded-lg hover:border-slate-400 transition-colors"
                   >
                     <Github className="w-4 h-4" />
