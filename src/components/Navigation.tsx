@@ -12,7 +12,7 @@ export default function Navigation() {
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/heena_jhade_resume_(2)_(2).pdf';
+    link.href = '/heena_jhade_resume.pdf';
     link.download = 'Heena_Jhade_Resume.pdf';
     document.body.appendChild(link);
     link.click();
